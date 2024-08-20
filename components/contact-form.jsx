@@ -1,6 +1,6 @@
 'use client';
 
-export function ContactForm() {
+export default function ContactForm() {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -13,12 +13,12 @@ export function ContactForm() {
     };
 
     return (
-        <form className="flex flex-col" name="contact" method="POST" data-netlify="true">
+        <form className="flex flex-col" name="contact" method="POST" onSubmit={handleFormSubmit} data-netlify="true">
             <p className="mb-4 flex-1">
-                <label>Your Name: <input type="text" name="name" /></label>
+                <label>Your Name: <input className="text-black" type="text" name="name" /></label>
             </p>
             <p className="mb-4">
-                <label>Your Email:&nbsp; <input type="email" name="email" /></label>
+                <label>Your Email:&nbsp; <input className="text-black" type="email" name="email" /></label>
             </p>
             {/* <p className="mb-4">
                         <label>Your Role: <select name="role[]" multiple>
@@ -27,7 +27,7 @@ export function ContactForm() {
                         </select></label>
                     </p> */}
             <p className="mb-4">
-                <label>Message: <textarea className="w-full" name="message"></textarea></label>
+                <label>Message: <textarea className="w-full text-black" name="message"></textarea></label>
             </p>
             <p className="mb-4">
                 <button className="rounded border-2 p-1 px-2 hover:bg-white hover:text-black" type="submit">Send</button>

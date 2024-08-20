@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ContactForm } from "../components/contact-form.jsx";
+import ContactForm from "../components/contact-form.jsx";
 
 export default function Home() {
     return (
