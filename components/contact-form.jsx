@@ -14,6 +14,7 @@ export default function ContactForm() {
 
     return (
         <form className="flex flex-col" name="contact" method="POST" onSubmit={handleFormSubmit} data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <p className="mb-4 flex-1">
                 <label>Your Name: <input className="text-black" type="text" name="name" /></label>
             </p>
